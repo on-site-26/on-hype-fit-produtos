@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>On Hype Fit</title>
+    <style>
+        /* Reseta as margens e força ocupação total da tela */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000000;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        /* Garante que o container do PDF seja responsivo e ocupe 100% no PC e Celular */
+        .pdf-container {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Estilo elegante para a mensagem de carregamento ou erro em celulares antigos */
+        .fallback-message {
+            color: #ffffff;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+        }
+
+        .btn-abrir {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 12px 24px;
+            background-color: #ffffff;
+            color: #000000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- A tag object é a mais recomendada para compatibilidade universal de PDFs em tela cheia -->
+    <object class="pdf-container" data="ON HYPE FIT.pdf" type="application/pdf">
+        <!-- Caso o navegador do celular bloqueie a visualização direta, exibe esta mensagem amigável -->
+        <div class="fallback-message">
+            <h2>Visualizar Cardápio On Hype Fit</h2>
+            <p>Se o seu dispositivo não abriu o arquivo automaticamente, clique no botão abaixo para visualizar:</p>
+            <a class="btn-abrir" href="ON HYPE FIT.pdf">Abrir PDF</a>
+        </div>
+    </object>
+
+</body>
+</html>
